@@ -12,5 +12,10 @@ public class Main {
 //		List<Employee> allEmployees = employeeService.getAll();
 //		allEmployees.forEach(e -> System.out.println(e));
 		
+		employeeService.updateEmployee(10, 897);
+		
+		employeeService.getAll()
+			.forEach(e -> System.out.println(e));
+		
 	}
 }

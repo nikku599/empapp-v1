@@ -57,20 +57,48 @@ public class EmployeeDaoImplementation implements EmployeeDao {
 
 	@Override
 	public Employee addEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return null;
+		PreparedStatement pstmt;
+		try {
+			pstmt = connection.prepareStatement("insert into emp(name,salary) values(?,?)");
+			pstmt.setString(1, employee.getName());
+			pstmt.setDouble(2, employee.getSalary());
+			int numberOfRowsAffected = pstmt.executeUpdate();
+			logger.info(numberOfRowsAffected+" affected");
+		} catch (SQLException e) {
+			logger.warn(e.toString());
+		}
+		return employee;
 	}
 
 	@Override
 	public Employee updateEmployee(int id, double salary) {
-		// TODO Auto-generated method stub
-		return null;
+		PreparedStatement pstmt;
+		Employee employee = getById(id);
+		try {
+			pstmt = connection.prepareStatement("update emp set salary=? where id=?");
+			pstmt.setDouble(1, salary);
+			pstmt.setInt(2, id);
+			int numberOfRowsAffected = pstmt.executeUpdate();
+			logger.info(numberOfRowsAffected+" affected");
+		} catch (SQLException e) {
+			logger.warn(e.toString());
+		}
+		return employee;
 	}
 
 	@Override
 	public Employee deleteEmployee(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		Employee employee = getById(id);
+		try {
+			PreparedStatement pstmt = connection.prepareStatement("delete from emp where id=?");
+			pstmt.setInt(1, id);
 
+			int numberOfRowsAffected = pstmt.executeUpdate();
+			logger.info(numberOfRowsAffected+" affected");
+
+		} catch (SQLException e) {
+			logger.warn(e.toString());
+		}
+		return employee;
+	}
 }
