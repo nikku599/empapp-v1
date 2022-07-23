@@ -29,26 +29,22 @@ public class EmployeeServiceImplementation implements EmployeeService {
 
 	@Override
 	public Employee getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeedao.getById(id);
 	}
 
 	@Override
 	public Employee addEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeedao.addEmployee(employee);
 	}
 
 	@Override
 	public Employee updateEmployee(int id, double salary) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeedao.updateEmployee(id, salary);
 	}
 
 	@Override
 	public Employee deleteEmployee(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeedao.deleteEmployee(id);
 	}
 
 }
