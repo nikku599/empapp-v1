@@ -1,3 +1,6 @@
 INFO  | 2022-07-22 22:35:44 | [main] dao.EmployeeDaoImplementation (EmployeeDaoImplementation.java:16) - logger initialized
 INFO  | 2022-07-22 22:53:15 | [main] dao.EmployeeDaoImplementation (EmployeeDaoImplementation.java:16) - logger initialized
 INFO  | 2022-07-22 22:53:15 | [main] service.EmployeeServiceImplementation (EmployeeServiceImplementation.java:26) - Time taken to getAll() : 11ms
+INFO  | 2022-07-23 10:58:23 | [main] dao.EmployeeDaoImplementation (EmployeeDaoImplementation.java:18) - logger initialized
+INFO  | 2022-07-23 10:58:45 | [main] dao.EmployeeDaoImplementation (EmployeeDaoImplementation.java:18) - logger initialized
+WARN  | 2022-07-23 10:58:45 | [main] exception.EmployeeNotFoundException (EmployeeNotFoundException.java:13) - EmployeeNotFoundException()

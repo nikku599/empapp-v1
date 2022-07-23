@@ -9,7 +9,8 @@ import com.empapp.service.EmployeeServiceImplementation;
 public class Main {
 	public static void main(String[] args) {
 		EmployeeService employeeService = new EmployeeServiceImplementation();
-		List<Employee> allEmployees = employeeService.getAll();
-		allEmployees.forEach(e -> System.out.println(e));
+//		List<Employee> allEmployees = employeeService.getAll();
+//		allEmployees.forEach(e -> System.out.println(e));
+		
 	}
 }
